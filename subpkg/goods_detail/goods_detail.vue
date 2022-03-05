@@ -1,5 +1,6 @@
 <template>
   <view>
+    商品
   </view>
 </template>
 

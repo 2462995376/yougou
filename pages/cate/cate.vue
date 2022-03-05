@@ -1,5 +1,6 @@
 <template>
   <view>
+    <my-serach></my-serach>
     <view class="scroll-view-container">
       <scroll-view class="left-scroll-view" scroll-y :style="{height: wh +'px'}">
         <view class="left-scroll-view-item" v-for="(item,index) in cateList" :key="index"
@@ -37,7 +38,7 @@
     },
     created() {
       const systemInfo = uni.getSystemInfoSync()
-      this.wh = systemInfo.windowHeight
+      this.wh = systemInfo.windowHeight-50
       this.getCateList()
     },
     methods: {

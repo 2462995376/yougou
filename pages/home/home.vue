@@ -1,5 +1,8 @@
 <template>
-  <view>
+  <view class="home-container">
+    <view class="serchbox">
+      <my-serach></my-serach>
+    </view>
     <swiper autoplay="true" :duration="1500" indicator-dots indicator-active-color="dark" :interval="3000"
       circular="true">
       <swiper-item class="swiper-item" v-for="(item,index) in swiperList" :key=index>
@@ -93,6 +96,12 @@
 </script>
 
 <style lang="scss">
+  .serchbox{
+    position: sticky;
+    top:0;
+    z-index: 999;
+  }
+  .home-container{
   swiper {
     height: 330rpx;
   }
@@ -128,5 +137,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
   }
 </style>
